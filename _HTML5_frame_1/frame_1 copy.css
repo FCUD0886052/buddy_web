@@ -1,0 +1,214 @@
+/*
+	@name frame_1
+*/
+/* Only edit this if you know what you are doing! */
+body { margin: 0px; padding: 0px; font-family:"Arial"; overflow-x:hidden; }
+
+/* Only edit this if you know what you are doing! */
+img { position: absolute; display: block; margin: 0px; border: none; padding: 0px; }
+
+/* Only edit this if you know what you are doing! */
+div { position: absolute; }
+
+#content-container { display: block; position: relative; width: 414px; width: 414px; height: 736px; overflow: hidden; display: block;  margin-left: auto; margin-right: auto;  }
+
+
+#page_frame_1_ek1 {
+	top: 0px;
+	left: 0px;
+	width: 414px;
+	height: 736px;
+}
+
+#_bg__frame_1_ek2 {
+	top: 0px;
+	left: 0px;
+	width: 414px;
+	height: 736px;
+	background:rgba(248,237,235,1);
+}
+
+
+#rectangle_4 {
+	top: 670px;
+	left: 0px;
+	width: 414px;
+	height: 66px;
+}
+
+
+#rectangle_1 {
+	top: 0px;
+	left: 0px;
+	width: 414px;
+	height: 61px;
+	background:rgba(149,225,211,1);
+}
+
+
+#hi__eden {
+	top: 19px;
+	left: 213px;
+	width: 98px;
+	height: 44px;
+	overflow: hidden;
+	font-family: Single Day;
+	font-size: 20px;
+	text-align: left;
+	color:#606C70;
+}
+
+
+#buddy_ {
+	top: 13px;
+	left: 8px;
+	width: 134px;
+	height: 59px;
+	overflow: hidden;
+	font-family: Single Day;
+	font-size: 30px;
+	text-align: left;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #ffffff;
+	-ms-text-shadow:1px 5px 4px rgba(0,0,0,0.25);
+	-o-text-shadow:1px 5px 4px rgba(0,0,0,0.25);
+	-webkit-text-shadow:1px 5px 4px rgba(0,0,0,0.25);
+	-moz-text-shadow:1px 5px 4px rgba(0,0,0,0.25);
+	text-shadow:1px 5px 4px rgba(0,0,0,0.25);
+	color:#606C70;
+}
+
+#group_2 {
+	top: 15px;
+	left: 302px;
+	width: 112px;
+	height: 31px;
+}
+
+#rectangle_2 {
+	top: 0px;
+	left: 0px;
+	width: 100px;
+	height: 31px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background:rgba(128,155,206,1);
+}
+
+
+#_300 {
+	top: 0px;
+	left: 48px;
+	width: 89px;
+	height: 45px;
+	overflow: hidden;
+	font-family: SirinStencil;
+	font-size: 20px;
+	text-align: left;
+	color:#FFFFFF;
+}
+
+#group_1 {
+	top: 5px;
+	left: 10px;
+	width: 20px;
+	height: 20px;
+}
+
+#ellipse_1 {
+	top: 1px;
+	left: 0px;
+	width: 22px;
+	height: 21.05px;
+	-ms-border-radius: 10px / 9.52px;
+	-o-border-radius: 10px / 9.52px;
+	-moz-border-radius: 10px / 9.52px;
+	-webkit-border-radius: 10px / 9.52px;
+	border-radius: 10px / 9.52px;
+	border: 1px solid #e6e05d;
+	background:rgba(230,224,93,1);
+}
+
+
+#b {
+	top: 0px;
+	left: 6px;
+	width: 29px;
+	height: 19.52px;
+	overflow: hidden;
+	font-family: SirinStencil;
+	font-size: 14px;
+	text-align: left;
+	color:#000000;
+}
+
+
+#icon {
+	top: 682px;
+	left: 344px;
+	width: 41.67px;
+	height: 41.67px;
+}
+
+
+#coolicon {
+	top: 682px;
+	left: 246px;
+	width: 37.5px;
+	height: 41.67px;
+}
+
+#clipboard_list {
+	top: 678px;
+	left: 135px;
+	width: 50px;
+	height: 50px;
+}
+
+#icon_ek1 {
+	top: 4.17px;
+	left: 8.33px;
+	width: 33.33px;
+	height: 41.67px;
+}
+
+#search {
+	top: 678px;
+	left: 38px;
+	width: 50px;
+	height: 50px;
+}
+
+#icon_ek2 {
+	top: 4.17px;
+	left: 4.17px;
+	width: 41.67px;
+	height: 41.67px;
+}
+
+#search_box {
+	top: 71px;
+	left: 13px;
+	width: 389px;
+	height: 25px;
+}
+#search_icon {
+	top: 75px;
+	left: 374px;
+	width: 16px;
+	height: 16px;
+}
+
+#search_icon_ek1 {
+	top: 0px;
+	left: 0px;
+	width: 16.4px;
+	height: 15.67px;
+}
+
+
+
+/* Add your custom CSS here */

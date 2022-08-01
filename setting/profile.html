@@ -1,0 +1,226 @@
+<!doctype html>
+<style>
+    .bg_buddy{
+        background-color: #95E1D3;
+    }
+    .coin_300 {
+        top: 0px;
+        left: 48px;
+        width: 89px;
+        height: 45px;
+        overflow: hidden;
+        font-family: SirinStencil;
+        font-size: 20px;
+        text-align: right;
+        color:#FFFFFF;
+    }
+    .rectangle_4 {
+        top: 670px;
+        left: 0px;
+        width: 414px;
+        height: 66px;
+    }
+    .rectangle_2 {
+        top: 0px;
+        left: 0px;
+        width: 80px;
+        height: 31px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background:rgba(128,155,206,1);
+    }
+
+    .body {
+        background-color: #F8EDEB;
+    }
+    .buddy_ {
+        top: 13px;
+        left: 8px;
+        width: 134px;
+        height: 59px;
+        overflow: hidden;
+        font-family: Single Day;
+        font-size: 30px;
+        text-align: left;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #ffffff;
+        -ms-text-shadow:1px 2px 4px rgba(0,0,0,0.25);
+        -o-text-shadow:1px 2px 4px rgba(0,0,0,0.25);
+        -webkit-text-shadow:1px 2px 4px rgba(0,0,0,0.25);
+        -moz-text-shadow:1px 2px 4px rgba(0,0,0,0.25);
+        text-shadow:1px 2px 4px rgba(0,0,0,0.25);
+        color:#606C70;
+    }
+    .card-title{
+        top: 13px;
+        left: 8px;
+        width: 134px;
+        height: 59px;
+        font-size: 20px;
+    }
+    .avatar {
+        vertical-align: middle;
+        margin-top: 40px;
+        margin-left: 20px;
+        width: 90px;
+        height: 90px;
+        border-radius: 90%;
+    }
+    .avatar_user {
+        vertical-align: middle;
+        margin-top: 40px;
+        margin-left: 20px;
+        width: 90px;
+        height: 90px;
+        border-radius: 90%;
+          
+    }
+    .card{
+        height: 30%;
+        border-radius: 20px;
+    }
+
+    
+</style>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <nav class="navbar navbar-expand-lg bg_buddy">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <b class="buddy_">
+                Buddy!
+            </b>
+          </a>
+          <h4>
+            <button class="rectangle_2" type="submit">
+                    <img src="C:\Users\a0917\Documents\畢專\web\B_adobespark.png" width="18" height="18" fill="yellow" class="bi bi-coin" viewBox="0 0 16 16"/>
+                    <i class="bi bi-coin"></i>
+                <b class="coin_300" font-family="SirinStencil";>
+                    300
+                </b>
+            </button>
+          </h4>
+        </div>
+      </nav>
+      <div class="card" style="border-radius: 20px; width: 60em; height: 800px; max-width: 540px; background-color: #F8EDEB;">
+        <div>
+            <img src="https://picsum.photos/100/100?random= + 100/" alt="Avatar" class="avatar">
+            <span class="card-title " style="font-size: 40px;">
+                User
+            </span>
+        </div>
+        
+        <h5>
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                     <div class="list-group" style="border-radius: 20px;">
+                            <button type="button" class="list-group-item list-group-item-action active btn btn-lg" href="#">
+                            BUDDY COIN 管理
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action  btn btn-lg" href="C:\Users\a0917\Documents\畢專\web\search\homepage.html">個人資料設定</button>
+                            <button type="button" class="list-group-item list-group-item-action  btn btn-lg" href="#">付款帳號設定</button>
+                            <button type="button" class="list-group-item list-group-item-action  btn btn-lg" href="#">帳號綁定/設定</button>
+                            <button type="button" class="list-group-item list-group-item-action  btn btn-lg" disabled>登出</button>
+                        </div>
+
+                    </div>
+        <!--             
+                    <div class="list-group">
+                        <button type="button" clas  s="list-group-item list-group-item-action active btn btn-lg" href="#">
+                        BUDDY COIN 管理
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action  btn btn-lg" href="C:\Users\a0917\Documents\畢專\web\search\homepage.html">個人資料設定</button>
+                        <button type="button" class="list-group-item list-group-item-action  btn btn-lg" href="#">付款帳號設定</button>
+                        <button type="button" class="list-group-item list-group-item-action  btn btn-lg" href="#">帳號綁定/設定</button>
+                        <button type="button" class="list-group-item list-group-item-action  btn btn-lg" disabled>登出</button>
+                    </div> -->
+
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                
+            </div>
+        </h5>
+      <!-- <form class="d-flex" role="search">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="search" aria-label="Rsearch" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" style="color: #080101db;"type="submit" id="button-addon2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+                <i class="bi bi-search"></i></button>
+            </button>
+            </div>
+        </div> -->
+      </form>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body style="background-color: #F8EDEB;">
+    <nav class="nav nav-tabs fixed-bottom" style="background-color: #95E1D3;">
+        <div class="col-3">
+            <li>
+                <a class="nav-link" style="color: #606C70; text-align:center; font-size: 16px;" aria-current="page" href="C:\Users\a0917\Documents\畢專\web\search\homepage.html">
+                    <i class="bi bi-file-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                    </i>
+                    <br>                    
+                    探索          
+                </a>
+            </li>
+        </div>
+        <div class="col-3">
+            <li>
+                <a class="nav-link" style="color: #606C70; text-align:center; font-size: 16px;" href="C:\Users\a0917\Documents\畢專\web\case_management\collection.html">
+                    <i class="bi bi-file-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" fill="currentColor" class="bi bi-file-text" viewBox="0 0 16 16">
+                        <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1H5z"/>
+                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+                    </svg>
+                    </i>
+                    <br>
+                    檔案管理
+                </a>
+            </li>
+        </div>
+        <div class="col-3">
+            <li>
+                <a class="nav-link" style="color: #606C70; text-align:center; font-size: 16px;" href="C:\Users\a0917\Documents\畢專\web\case_management\collection.html">
+                    <i class="bi bi-person">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                    </svg>
+                    </i>
+                    <br>
+                    我的案件
+                </a>
+            </li>
+        </div>
+        <div class="col-3">
+            <li>
+                <a class="nav-link" style="color: #606C70; text-align:center; font-size: 16px;" href="#">
+                    <i class="bi bi-gear">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                        <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                        <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+                    </svg>
+                    </i>
+                    <br>
+                    設定
+                </a>
+            </li>
+        </div>
+
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
