@@ -1,0 +1,229 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.6.0/dist/web3.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./qq.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <a href="../mycase/posted.html" style="color: #606c70">
+    <i class="bi bi-arrow-return-left" style="width: 30px; height: 30px;" >
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
+      </svg>
+    </i>
+    BACK
+  </a>
+
+</head>
+
+<body style="background-color: #F8EDEB;">
+
+  <div class="card" style=" background-color: #F8EDEB; border:solid #CCCCBF 0.2pc;">
+ 
+        <span>
+          <img style="width: 80px; height: 80px; margin-right: 15px; margin-left: 5px; margin-top: 5px; float: left; border-radius: 50%;"
+          src="https://picsum.photos/id/69/100/100" alt="Avatar" class="avatar">
+          
+          <input id="title" placeholder="請輸入標題" style="position:relative; height: 80px; width: 200px; border: none; background-color: #F8EDEB;"> </input>
+            <span>
+              <span class="w3-badge" style="margin-bottom:1%; color:#606c70; border-radius: 15%; height: 30px; font-size: 10px; background-color: #8ac6d1; width: 60px;">
+                <nobr>
+                  <img  src="../B_adobespark.png" style="width: 15px; height: 15px;">
+                  <input id="money" placeholder="" style="height: 30px; width: 20px; background-color: #8ac6d1; border: none;"> </input>
+                </nobr>
+              </span>
+            </span>
+        </span>
+
+        <div style="margin-top: 1%;">
+          <span class="w3-badge" style="margin-bottom:1%; color:#606c70; border-radius: 15px; height: 30px; font-size: 10px; background-color: #CDDAFD; width: 60px;">
+            <nobr>
+              <input id="hashtag" placeholder="#Hashtag" style="height: 30px; width: 90px; background-color: #CDDAFD; border: none; border-radius: 15px;"> </input>
+            </nobr>
+          </span>
+        </div>
+
+        <div class="card-body">
+          <span>
+            <textarea style="height: 400px; width: 300px; border: solid #CCCCBF 0.2pc;" rows="20" cols="40" placeholder="請輸入內文"></textarea>
+          </span>
+
+          <div class="dropdown-item">
+            <a class="btn dropdown-toggle" href="#">
+              教學方式
+            </a>
+            <ul class="dropdown-menu">
+              <select name="cars" id="cars">
+                <option value="volvo">面授</option>
+                <option value="saab">線上</option>
+                <option value="opel">其他</option>
+              </select>
+            </ul>
+          </div>
+
+          <label for="cars">教學方式：</label>
+          <select name="cars" id="cars">
+            <option value="volvo">面授</option>
+            <option value="saab">線上</option>
+            <option value="opel">其他</option>
+          </select>
+
+          <div>
+            <button style="margin-right: 1%; border: none; float: right; background-color: #8ac6d1; color: #606c70; width: 80px; height: 40px; font-weight: 600;">發 布</button>
+          </div>
+        </div>
+
+
+  </div>
+
+  <!-- <h1> 
+    <input placeholder="#add..."> </input>  
+
+  </h1>
+  <h1> 
+    <input placeholder=" Enter any notes here..."> </input>  
+
+  </h1>
+  <h1> 
+    <input placeholder=" $"> </input>  
+
+  </h1>
+    
+    
+    <input type="text" id="title"></input>
+    <input type="text" id="text"></input>
+    <input type="number" id="money"></input> 
+    <input type="text" id="hashtag"></input> -->
+    <!-- <p id="aa"></p>
+    <p id="bb"></p>
+    <p id="cc"></p>
+    <p id="dd"></p> -->
+
+      <script> 
+        
+        
+        const startt = async () => {
+          var title = document.getElementById("title").value;
+          var text = document.getElementById("text").value;
+          var pri = document.getElementById("money").value;
+          var hash = document.getElementById("hashtag").value;
+          // console.log(title);
+          // var g = await 0;
+          try {
+            const web3 = new Web3(new Web3.providers.HttpProvider('http://140.134.25.44:8545'));
+            const accounts = await web3.eth.getAccounts();
+            web3.eth.defaultAccount = accounts[0];
+            // const UserContract = new web3.eth.Contract([{"inputs":[{"internalType":"string","name":"_name","type":"string"},{"internalType":"string","name":"_lineID","type":"string"},{"internalType":"string","name":"_mobile","type":"string"}],"name":"_createUser","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"_u","type":"address"}],"name":"getuserlineID","outputs":[{"internalType":"string","name":"l","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_u","type":"address"}],"name":"getusermobile","outputs":[{"internalType":"string","name":"m","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_u","type":"address"}],"name":"getusername","outputs":[{"internalType":"string","name":"n","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"userdata","outputs":[{"internalType":"address","name":"useradd","type":"address"},{"internalType":"string","name":"name","type":"string"},{"internalType":"string","name":"lineID","type":"string"},{"internalType":"string","name":"mobile","type":"string"}],"stateMutability":"view","type":"function"}],"0x3f2B2a25Bb2f358dD20B803c971f7AB713eD7a27");
+            const PostContract = new web3.eth.Contract([{"inputs":[{"internalType":"string","name":"_title","type":"string"},{"internalType":"string","name":"_text","type":"string"},{"internalType":"uint256","name":"_price","type":"uint256"},{"internalType":"string","name":"_hash","type":"string"}],"name":"_createPost","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"string","name":"_name","type":"string"},{"internalType":"string","name":"_lineID","type":"string"},{"internalType":"string","name":"_mobile","type":"string"}],"name":"_createUser","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_pc","type":"uint256"}],"name":"getl","outputs":[{"internalType":"bool","name":"_lo","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_pc","type":"uint256"}],"name":"getpostaddr","outputs":[{"internalType":"address","name":"a","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"getpostcount","outputs":[{"internalType":"uint256","name":"j","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_pc","type":"uint256"}],"name":"getpostdate","outputs":[{"internalType":"uint256","name":"dat","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_pc","type":"uint256"}],"name":"getposthashtag","outputs":[{"internalType":"string","name":"hash","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_pc","type":"uint256"}],"name":"getpostlove","outputs":[{"internalType":"bool","name":"_love","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_pc","type":"uint256"}],"name":"getpostprice","outputs":[{"internalType":"uint256","name":"pri","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_pc","type":"uint256"}],"name":"getposttext","outputs":[{"internalType":"string","name":"te","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_pc","type":"uint256"}],"name":"getposttitle","outputs":[{"internalType":"string","name":"ti","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_u","type":"address"}],"name":"getuserlineID","outputs":[{"internalType":"string","name":"l","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_u","type":"address"}],"name":"getusermobile","outputs":[{"internalType":"string","name":"m","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_u","type":"address"}],"name":"getusername","outputs":[{"internalType":"string","name":"n","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"userdata","outputs":[{"internalType":"address","name":"useradd","type":"address"},{"internalType":"string","name":"name","type":"string"},{"internalType":"string","name":"lineID","type":"string"},{"internalType":"string","name":"mobile","type":"string"}],"stateMutability":"view","type":"function"}],'0x47DcF4c381BE8bCB407245aDEc7148a2d2692a3E');
+            PostContract.methods._createPost(title,text,pri,hash).send({from:web3.eth.defaultAccount,gas:6721975,gasPrice:'0'}).then(console.log);
+            // const FormContract = new web3.eth.Contract([{"inputs":[{"internalType":"uint256","name":"_number","type":"uint256"},{"internalType":"string","name":"_change","type":"string"}],"name":"_createForm","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"string","name":"_name","type":"string"},{"internalType":"string","name":"_lineID","type":"string"},{"internalType":"string","name":"_mobile","type":"string"}],"name":"_createUser","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_fc","type":"uint256"}],"name":"getformchange","outputs":[{"internalType":"string","name":"ch","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"getformcount","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_fc","type":"uint256"}],"name":"getformlineID","outputs":[{"internalType":"string","name":"line","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_fc","type":"uint256"}],"name":"getformnum","outputs":[{"internalType":"uint256","name":"num","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_u","type":"address"}],"name":"getuserlineID","outputs":[{"internalType":"string","name":"l","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_u","type":"address"}],"name":"getusermobile","outputs":[{"internalType":"string","name":"m","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_u","type":"address"}],"name":"getusername","outputs":[{"internalType":"string","name":"n","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"userdata","outputs":[{"internalType":"address","name":"useradd","type":"address"},{"internalType":"string","name":"name","type":"string"},{"internalType":"string","name":"lineID","type":"string"},{"internalType":"string","name":"mobile","type":"string"}],"stateMutability":"view","type":"function"}],"0xe9877465f18C5f62e3DAC664043ef4d7e7efFfa2");
+            // const TokenContract = new web3.eth.Contract([{"inputs":[{"internalType":"uint256","name":"_supply","type":"uint256"}],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"spender","type":"address"},{"indexed":false,"internalType":"uint256","name":"value","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":false,"internalType":"uint256","name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"spender","type":"address"}],"name":"allowance","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"approve","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"account","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"decimals","outputs":[{"internalType":"uint8","name":"","type":"uint8"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"subtractedValue","type":"uint256"}],"name":"decreaseAllowance","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"addedValue","type":"uint256"}],"name":"increaseAllowance","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"recipient","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"transfer","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"sender","type":"address"},{"internalType":"address","name":"recipient","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"transferFrom","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"}],"0xeF04cb2288Fac8208Ae04A0D244c549f9862E149");
+            // const MigContract = new web3.eth.Contract([{"inputs":[],"name":"last_completed_migration","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"completed","type":"uint256"}],"name":"setCompleted","outputs":[],"stateMutability":"nonpayable","type":"function"}],"0xA13da44A268f5748CfBcc4890d291F3fe3f236f5");
+            
+            // web3.eth.getBalance(web3.eth.defaultAccount).then(console.log);//餘額
+            // var name = document.getElementById("username").value;//可以!!!!
+
+            // UserContract.methods._createUser(p,p,p).send({from:web3.eth.defaultAccount,gas:6721975,gasPrice:'0'}).then(console.log);
+            // UserContract.methods.getusermobile(web3.eth.defaultAccount).call({from:web3.eth.defaultAccount}).then(k => document.getElementById('aaa').innerText = k);
+          
+            // PostContract.methods._createPost(title,text,pri,hash).send({from:web3.eth.defaultAccount,gas:6721975,gasPrice:'0'});//.then(console.log);
+            
+            // var o = await PostContract.methods.getpostcount().call();//.then(k => document.getElementById('jjj').innerText );
+            // console.log(o);
+            // document.getElementById("z").innerText = o;
+            // for(i=0;i<7;i++){
+            //   await PostContract.methods.getposttitle(o).call({from:web3.eth.defaultAccount}).then(k => document.getElementById(s[g]).innerHTML = k);
+            //   g+=1;
+              
+            //   // console.log(s[g]);
+            //   await PostContract.methods.getposthashtag(o).call({from:web3.eth.defaultAccount}).then(k => document.getElementById(s[g]).innerHTML = k);
+            //   g+=1;
+
+              
+            //   await PostContract.methods.getpostprice(0).call({from:web3.eth.defaultAccount}).then(k => document.getElementById(s[g]).innerText = k);
+            //   // await PostContract.methods.getposttext(o).call({from:web3.eth.defaultAccount}).then(k => document.getElementById(s[g]).innerHTML = k);
+            //   g+=1;
+            //   // console.log(g);
+            //   o -= 1;
+            // }
+            // console.log(s[g]);
+            // await PostContract.methods.getposttitle(0).call({from:web3.eth.defaultAccount}).then(k => console.log("in" + g),document.getElementById(s[g]).innerHTML = await k);
+            
+            // console.log(g)
+            //   // console.log(g);
+            // g= g+1;
+            //   // console.log(s[g]);
+              // PostContract.methods.getposttext(0).call({from:web3.eth.defaultAccount}).then(k => document.getElementById("b").innerText = k);
+              
+              // g+=1;
+              // console.log(g)
+            //   PostContract.methods.getposthashtag(0).call({from:web3.eth.defaultAccount}).then(k => document.getElementById('c').innerText = k);
+            //   g+=1;
+            //   PostContract.methods.getposttitle(1).call({from:web3.eth.defaultAccount}).then(k => document.getElementById('d').innerText = k);
+            //   g+=1;
+            //   // console.log(s[g]);
+            //   PostContract.methods.getposttext(1).call({from:web3.eth.defaultAccount}).then(k => document.getElementById('e').innerText = k);
+            //   g+=1;
+            //   PostContract.methods.getposthashtag(1).call({from:web3.eth.defaultAccount}).then(k => document.getElementById('f').innerText = k);
+            //   g+=1;
+            // console.log(document.getElementById(s[g]))
+            // PostContract.methods.getposttitle(o).call({from:web3.eth.defaultAccount}).then(k => document.getElementById(g).innerText = k);
+
+            // PostContract.methods.getposttitle(0).call({from:web3.eth.defaultAccount}).then(k => document.getElementById('a').innerText = k);
+            // PostContract.methods.getposttext(0).call({from:web3.eth.defaultAccount}).then(k => document.getElementById('b').innerText = k);
+            // PostContract.methods.getposthashtag(0).call({from:web3.eth.defaultAccount}).then(k => document.getElementById('e').innerText = k);
+            // PostContract.methods.getpostprice(0).call({from:web3.eth.defaultAccount}).then(k => document.getElementById('ccc').innerText = k);
+            // PostContract.methods.getpostdate(0).call({from:web3.eth.defaultAccount}).then(k => document.getElementById('ddd').innerText = k);
+            
+            // FormContract.methods._createForm(1500,"換成linepoint").send({from:web3.eth.defaultAccount,gas:6721975,gasPrice:'0'}).then(console.log);
+            // PostContract.methods.getformcount().call().then(k => document.getElementById('jjj').innerText = k);
+            // FormContract.methods.getformlineID(0).call({from:web3.eth.defaultAccount}).then(k => document.getElementById('fff').innerText = k);
+            // FormContract.methods.getformnum(0).call({from:web3.eth.defaultAccount}).then(k => document.getElementById('ggg').innerText = k);
+            // FormContract.methods.getformchange(0).call({from:web3.eth.defaultAccount}).then(k => document.getElementById('hhh').innerText = k);
+            
+            // TokenContract.methods.transfer(accounts[1],100).send({from:web3.eth.defaultAccount,gas:6721975,gasPrice:'0'}).then(console.log);
+            // TokenContract.methods.balanceOf(web3.eth.defaultAccount).call({from:web3.eth.defaultAccount}).then(k => document.getElementById('iii').innerText = k);
+
+
+          
+            // console.log(document.getElementById("lineid").value);//可以!!!!
+            // console.log(document.getElementById("phone").value);//可以!!!!
+          } catch(err) {
+            console.error("Error:", err);
+          }
+        }
+        
+        // web3.eth.getAccounts().then(e => console.log(e));
+        // const UserContract = new web3.eth.Contract([{"inputs":[{"internalType":"string","name":"_name","type":"string"},{"internalType":"string","name":"_lineID","type":"string"},{"internalType":"string","name":"_mobile","type":"string"}],"name":"_createUser","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"_u","type":"address"}],"name":"getuserlineID","outputs":[{"internalType":"string","name":"l","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_u","type":"address"}],"name":"getusermobile","outputs":[{"internalType":"string","name":"m","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_u","type":"address"}],"name":"getusername","outputs":[{"internalType":"string","name":"n","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"userdata","outputs":[{"internalType":"address","name":"useradd","type":"address"},{"internalType":"string","name":"name","type":"string"},{"internalType":"string","name":"lineID","type":"string"},{"internalType":"string","name":"mobile","type":"string"}],"stateMutability":"view","type":"function"}],'0x5C1BE5085A4e90a1e32fe7F2F1654E21A267D22B');
+        // console.log(UserContract);
+        // web3.eth.defaultAccount = accounts[0];
+        // console.log(web3.eth.defaultAccount);
+        //     
+        //     contractInstance.getusername("web3.eth.defaultAccount").call(function(error, result) {
+          //     if (error) {
+            //       console.log(abed);
+            //         // error handle
+            //     } else {
+              //         // result is string
+              //         // do something
+              //     }
+              // });
+              // UserContract.methods._createUser('a', 'aa', '0123').send({from:web3.eth.defaultAccount}).then(console.log);
+              // const U =  UserContract.methods.getusername("0xB80F1ED6c20904feADf4dbf13b442a529fa42536").call();
+              // console.log(U.toString());
+              </script>
+      
+      
+      
+        
+        </form>
+
+      <script>
+      </script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+
+</html>
